@@ -26,4 +26,3 @@ export class FiltreTachePipe implements PipeTransform {
   }
 
 }
-
