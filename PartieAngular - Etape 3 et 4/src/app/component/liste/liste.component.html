@@ -1,0 +1,17 @@
+<div class="container-fluid d-flex justify-content-center">
+    <div class="d-flex flex-column">
+        <div class="bd-highlight">
+            <button class="btn btn-outline-secondary m-1 bp" (click)="loggout()">Logout</button>
+            <h1>Mes Listes</h1>
+
+        </div>
+        <div class="d-flex flex-row justify-content-center ">
+            <input id="inputAjoutListe" class="saisieInput" type="text" name="liste" placeholder="liste" [(ngModel)]="newListe.titre">
+            <button id="buttonAjoutListe" class="btn btn-primary" value="Ajouter" (click)='ajouterListe()'>Ajouter</button>
+        </div>
+        <div class="d-flex  justify-content-center coliste" *ngFor="let liste of listes">
+            <button class="btn btn-outline-danger m-1" (click)='supprimerListe(liste)'>Supprimer</button>
+            <app-taches [liste]="liste"></app-taches>
+        </div>
+    </div>
+</div>
